@@ -1,5 +1,6 @@
 const gameClient = document.getElementById("app")
 
+//renders the client
 renderGame()
 function renderGame(){
   gameClient.innerHTML= /*html*/`
@@ -7,39 +8,49 @@ function renderGame(){
       ${renderFight()}
     </div>
     <div id="app-text-box">
-    ${renderFightText()}</div>
+    ${renderFightAttackMenu()}</div>
     <div id="app-menu-box">
     ${renderFightMenu()}</div>
   `;
 }
 
+//render all the game fight info and sprites
 function renderFight(){
   const fightForegroundLayer = /*html*/`
-      <img src="assets/background/fight.png" id="background-picture"></img>
-      <img src="assets/pokemon/charmander.png" id="foreground-picture1"></img>
-      <img src="assets/pokemon/bulbasar.png" id="foreground-picture2"></img>
+    <div id="player-stats">
+      <div class="stats-name-box">Charmander</div>
+      <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/29</div>
+      <div class="stats-lvl-box">LV.${playerLVL}</div>
+    </div>
+    <div id="enemy-stats">
+     <div class="stats-name-box">Bulbasaur</div>
+     <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/31</div> 
+     <div class="stats-lvl-box">LV.${playerLVL}</div>    
+    </div>
+    <img src="assets/background/fight.png" id="background-picture"></img>
+    <img src="assets/pokemon/charmander.png" class="foreground-pokemon"></img>
+    <img src="assets/pokemon/bulbasar.png" class="foreground-pokemon"></img>
   `;
   return fightForegroundLayer
 }
 
+//render all the text for the fight
+function renderFightAttackMenu(){
+  const fightAttackMenu = /*html*/`
+  <button id="#fight-text-button-1">Ember</button>
+  <button id="#fight-text-button-2">Scratch</button>
+  `;
+  return fightAttackMenu
+}
+
+//render all the buttons for the fight
 function renderFightMenu(){
   const fightMenu = /*html*/`
   <div id="menu-buttons">
-  <button id="#menu-button-1">FIGHT</button>
-  <button id="#menu-button-2">BAG</button>
-  <button id="#menu-button-3">POKEMON</button>
-  <button id="#menu-button-4">RUN</button>
+
+  <button id="#menu-button-1">CATCH</button>
+  <button id="#menu-button-2">RUN</button>
   </div>
   `;
   return fightMenu
-}
-
-function renderFightText(){
-  const fightText = /*html*/`
-  <button id="#fight-text-button-1">Ember</button>
-  <button id="#fight-text-button-2">Tackle</button>
-  <button id="#fight-text-button-3">Growl</button>
-  <button id="#fight-text-button-4">SmokeScreen</button>
-  `;
-  return fightText
 }

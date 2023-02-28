@@ -1,3 +1,4 @@
+/*------------- IMPORTS -------------*/
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 /*------------- HTML MAIN -------------*/
@@ -55,7 +56,8 @@ button:hover{
   height: 100px;
   border-radius: 4px;
   box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
-  margin-top: 20px
+  margin-top: 20px;
+  position: relative;
 }
 
 #app-menu-box{
@@ -66,9 +68,10 @@ button:hover{
   box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
   margin-top: 20px;
   margin-left: 20px;
+  position: relative;
 }
 
-/*------------- APP SPRITES -------------*/
+/*------------- PICTURES/SPRITES -------------*/
 #fight-background-picture{
   position: absolute;
 }
@@ -77,43 +80,86 @@ button:hover{
   position: absolute;
 }
 
-#foreground-picture1{
+.foreground-pokemon{
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#foreground-picture2{
-  position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
 }
 
 /*------------- FIGHT MENU -------------*/
 #menu-buttons{
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 #menu-button-1{
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 #menu-button-2{
-}
-
-#menu-button-3{
-}
-
-#menu-button-4{
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 /*------------- FIGHT TEXT -------------*/
 #fight-text-button-1{
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 #fight-text-button-2{
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
-#fight-text-button-3{
+/*------------- STATS -------------*/
+#player-stats{
+  background-color: #202020;
+  width: 200px;
+  height: 55px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 20px;
+  left: 30px;
 }
 
-#fight-text-button-4{
+#enemy-stats{
+  background-color: #202020;
+  width: 200px;
+  height: 55px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 20px;
+  left: 270px;
 }
+
+.stats-name-box{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.stats-hp-box{
+  position: absolute;
+  top:28px;
+  right: 10px;
+}
+
+.stats-text-hp{
+  position: absolute;
+  top:0px;
+  right: 48px;
+}
+
+.stats-lvl-box{
+  position: absolute;
+  top:28px;
+  left: 10px;
