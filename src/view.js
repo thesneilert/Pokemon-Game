@@ -18,18 +18,18 @@ function renderGame(){
 function renderFight(){
   const fightForegroundLayer = /*html*/`
     <div id="player-stats">
-      <div class="stats-name-box">Charmander</div>
-      <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/29</div>
-      <div class="stats-lvl-box">LV.${playerLVL}</div>
+      <div class="stats-name-box">${playerPokemon[0].name}</div>
+      <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerPokemon[0].hp}/29</div>
+      <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${playerLVL}</text></div>
     </div>
     <div id="enemy-stats">
-     <div class="stats-name-box">Bulbasaur</div>
-     <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/31</div> 
-     <div class="stats-lvl-box">LV.${playerLVL}</div>    
+     <div class="stats-name-box">${enemyPokemon[0].name}</div>
+     <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyPokemon[0].hp}/31</div> 
+     <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${enemyPokemon[0].lvl}</text></div>    
     </div>
     <img src="assets/background/fight.png" id="background-picture"></img>
-    <img src="assets/pokemon/charmander.png" class="foreground-pokemon"></img>
-    <img src="assets/pokemon/bulbasar.png" class="foreground-pokemon"></img>
+    <img src="assets/pokemon/${playerPokemon[0].spriteback}.png" class="foreground-pokemon"></img>
+    <img src="assets/pokemon/${enemyPokemon[0].spritefront}.png" class="foreground-pokemon"></img>
   `;
   return fightForegroundLayer
 }
@@ -37,8 +37,8 @@ function renderFight(){
 //render all the text for the fight
 function renderFightAttackMenu(){
   const fightAttackMenu = /*html*/`
-  <button id="#fight-text-button-1">Ember</button>
-  <button id="#fight-text-button-2">Scratch</button>
+  <button id="fight-text-button-1">Ember</button>
+  <button id="fight-text-button-2">Scratch</button>
   `;
   return fightAttackMenu
 }
@@ -46,11 +46,8 @@ function renderFightAttackMenu(){
 //render all the buttons for the fight
 function renderFightMenu(){
   const fightMenu = /*html*/`
-  <div id="menu-buttons">
-
-  <button id="#menu-button-1">CATCH</button>
-  <button id="#menu-button-2">RUN</button>
-  </div>
+  <button id="menu-button-1">CATCH</button>
+  <button id="menu-button-2">RUN</button>
   `;
   return fightMenu
 }

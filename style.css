@@ -87,35 +87,25 @@ button:hover{
 }
 
 /*------------- FIGHT MENU -------------*/
-#menu-buttons{
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#menu-button-1 {
+  top: 50px;
+  left: 10px;
 }
 
-#menu-button-1{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-#menu-button-2{
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#menu-button-2 {
+  top: 50px;
+  left: 100px;
 }
 
 /*------------- FIGHT TEXT -------------*/
-#fight-text-button-1{
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#fight-text-button-1 {
+  top: 10px;
+  left: 10px;
 }
 
-#fight-text-button-2{
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#fight-text-button-2 {
+  top: 10px;
+  left: 100px;
 }
 
 /*------------- STATS -------------*/
@@ -156,10 +146,17 @@ button:hover{
 .stats-text-hp{
   position: absolute;
   top:0px;
-  right: 48px;
+  right: 47px;
 }
 
 .stats-lvl-box{
   position: absolute;
   top:28px;
   left: 10px;
+}
+
+.stats-text-lvl{
+  position: absolute;
+  top:0px;
+  right: -24px;
+}
