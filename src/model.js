@@ -1,3 +1,8 @@
+//set player and enemy current pokemon
+//[0] for bulbasaur, [1] for charmander, [2] for squirtle
+var playerCurrentPokemon = [2];
+var enemyCurrentPokemon = [1];
+
 //pokemon element box objects
 var grassElement = {
     background:'#65bb69',
@@ -90,9 +95,3 @@ var enemyPokemon = [bulbasaur, charmander, squirtle];
 
 var playerCurrentHP = playerPokemon[1].hp;
 var enemyCurrentHP = playerPokemon[0].hp;
-
-
-//set player and enemy current pokemon
-//[0] for bulbasaur, [1] for charmander, [2] for squirtle
-var playerCurrentPokemon = [2];
-var enemyCurrentPokemon = [1];
