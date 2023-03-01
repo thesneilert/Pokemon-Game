@@ -17,19 +17,21 @@ function renderGame(){
 //render all the game fight info and sprites
 function renderFight(){
   const fightForegroundLayer = /*html*/`
+  <img src="assets/background/forest.png" id="background-picture"></img>
+  <img src="assets/pokemon/${playerPokemon[0].spriteback}.png" class="foreground-pokemon"></img>
+  <img src="assets/pokemon/${enemyPokemon[0].spritefront}.png" class="foreground-pokemon"></img>
     <div id="player-stats">
       <div class="stats-name-box">${playerPokemon[0].name}</div>
-      <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerPokemon[0].hp}/29</div>
+      <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerPokemon[0].hp}/${playerPokemon[0].hp}</div>
       <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${playerLVL}</text></div>
     </div>
+    <img src="assets/element/${playerPokemon[0].type}_player.png" class="element-picture"></img>
     <div id="enemy-stats">
      <div class="stats-name-box">${enemyPokemon[0].name}</div>
-     <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyPokemon[0].hp}/31</div> 
+     <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyPokemon[0].hp}/${playerPokemon[0].hp}</div> 
      <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${enemyPokemon[0].lvl}</text></div>    
     </div>
-    <img src="assets/background/fight.png" id="background-picture"></img>
-    <img src="assets/pokemon/${playerPokemon[0].spriteback}.png" class="foreground-pokemon"></img>
-    <img src="assets/pokemon/${enemyPokemon[0].spritefront}.png" class="foreground-pokemon"></img>
+    <img src="assets/element/${playerPokemon[0].type}_enemy.png" class="element-picture"></img>
   `;
   return fightForegroundLayer
 }

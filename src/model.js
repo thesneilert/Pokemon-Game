@@ -3,7 +3,7 @@ var bulbasaur = {
     name: 'Bulbasaur',
     type: 'grass',
     lvl: 3,
-    hp: 31, //28-31
+    hp: 31, //28-31 at lvl 3
     spritefront:'bulbasaur_front',
     spriteback:'bulbasaur_back',
     attack1: 'Vine Whip',
@@ -16,7 +16,7 @@ var charmander = {
     name: 'Charmander',
     type: 'fire',
     lvl: 3,
-    hp: 29, //25-29
+    hp: 29, //25-29 at lvl 3
     spritefront:'charmander_front',
     spriteback:'charmander_back',
     attack1: 'Ember',
@@ -29,7 +29,7 @@ var squirtle = {
     name: 'Squirtle',
     type: 'water',
     lvl: 3,
-    hp: 31, //27-31
+    hp: 31, //27-31 at lvl 3
     spritefront:'squirtle_front',
     spriteback:'squirtle_back',
     attack1: 'Bubble',
@@ -38,9 +38,9 @@ var squirtle = {
     attack4: 'Yawn',
 };
 
-var playerPokemon = [charmander];
+var playerPokemon = [bulbasaur, charmander, squirtle];
 
-var enemyPokemon = [bulbasaur];
+var enemyPokemon = [bulbasaur, charmander, squirtle];
 
 //current hp and total possible hp for player pokemon
 var playerCurrentHP = 0;
