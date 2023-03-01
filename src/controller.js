@@ -1,47 +1,32 @@
-function playerAttack() {
-    // Calculate player's attack damage
-    const playerAttackPower = playerPokemon[0].attack1.power;
-    const playerAttackType = playerPokemon[0].attack1.type;
-    const enemyDefense = enemyPokemon[0].defense;
-    const enemyType = enemyPokemon[0].type;
-    const damage = calculateDamage(playerAttackPower, playerAttackType, enemyDefense, enemyType);
-  
-    // Apply damage to enemy Pokemon
-    enemyCurrentHP -= damage;
+function playerAttackBtn1(){
+//Makes the enemy do random attack
+  const enemyAttackNum = Math.floor(Math.random()*2)+1;
+  let enemyAttack;
+    if (enemyAttackNum === 1) {
+        enemyAttack = enemyPokemon[0].attack1;
+    } else {
+        enemyAttack = enemyPokemon[0].attack2;
+    }
+
+//PLAYER attack
+const damageToEnemy = playerPokemon[1].attack1.power;
+      enemyCurrentHP -= damageToEnemy;
+//check if ENEMY has 0 or less hp
     if (enemyCurrentHP <= 0) {
-      // Enemy Pokemon has fainted
-      endBattle(true);
-    } else {
-      // Enemy Pokemon retaliates
-      enemyAttack();
+        endGame(); //player wins
+        enemyCurrentHP = 0; //sets enemy to 0hp
     }
-  }
-  
-  function calculateDamage(attackPower, attackType, defense, enemyType) {
-    // Calculate damage based on attack power, attack type, defense, and enemy type
-    // You can use a formula or lookup table based on the game mechanics
-  }
-  
-  function enemyAttack() {
-    // Calculate enemy's attack damage
-    const enemyAttackPower = enemyPokemon[0].attack1.power;
-    const enemyAttackType = enemyPokemon[0].attack1.type;
-    const playerDefense = playerPokemon[0].defense;
-    const playerType = playerPokemon[0].type;
-    const damage = calculateDamage(enemyAttackPower, enemyAttackType, playerDefense, playerType);
-  
-    // Apply damage to player's Pokemon
-    playerCurrentHP -= damage;
+
+//ENEMY attack
+const damageToPlayer = enemyAttack.power;
+      playerCurrentHP -= damageToPlayer;
+//check if PLAYER has 0 or less hp
     if (playerCurrentHP <= 0) {
-      // Player's Pokemon has fainted
-      endBattle(false);
-    } else {
-      // Player's turn again
-      renderFightAttackMenu();
+        endGame(); //enemy wins
+        playerCurrentHP = 0;
     }
-  }
-  
-  function endBattle(playerWins) {
-    // End the battle and display the winner
-  }
-  
+    renderGame();
+}
+
+function endGame() {
+}
