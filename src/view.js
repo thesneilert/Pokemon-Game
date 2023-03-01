@@ -14,6 +14,7 @@ function renderGame(){
   `;
 }
 
+
 //render all the game fight info and sprites
 function renderFight(){
   const fightForegroundLayer = /*html*/`
@@ -39,6 +40,7 @@ function renderFight(){
   return fightForegroundLayer
 }
 
+
 //render all the text for the fight
 function renderFightAttackMenu(){
   const fightAttackMenu = /*html*/`
@@ -55,6 +57,7 @@ function renderFightMenu(){
   `;
   return fightMenu
 }
+
 
 //renders the colors and text for the pokemon element boxes
 function renderElementInfoBox(){

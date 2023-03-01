@@ -1,9 +1,4 @@
-//set player and enemy current pokemon
-//[0] for bulbasaur, [1] for charmander, [2] for squirtle
-var playerCurrentPokemon = [2];
-var enemyCurrentPokemon = [1];
-
-//element boxes colors
+//pokemon element box objects
 var grassElement = {
     background:'#65bb69',
     border:'#43a047', 
@@ -19,7 +14,8 @@ var waterElement = {
     border:'#0c47a1', 
 }
 
-//attacks
+
+//attacks objects
 var tackle = {
     name: 'Tackle',
     power: '5'
@@ -45,7 +41,8 @@ var bubble = {
     power: '12'
 }
 
-//pokemon
+
+//pokemon objects
 var bulbasaur = {
     name: 'Bulbasaur',
     type: 'grass',
@@ -85,9 +82,17 @@ var squirtle = {
     border: waterElement.border,
 };
 
+
+//pokemon arrays
 var playerPokemon = [bulbasaur, charmander, squirtle];
 
 var enemyPokemon = [bulbasaur, charmander, squirtle];
 
 var playerCurrentHP = playerPokemon[1].hp;
 var enemyCurrentHP = playerPokemon[0].hp;
+
+
+//set player and enemy current pokemon
+//[0] for bulbasaur, [1] for charmander, [2] for squirtle
+var playerCurrentPokemon = [2];
+var enemyCurrentPokemon = [1];

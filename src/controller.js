@@ -8,6 +8,7 @@ function playerAttackBtn1(){
         enemyAttack = enemyPokemon[0].attack2;
     }
 
+
 //PLAYER attack
 const damageToEnemy = playerPokemon[1].attack1.power;
       enemyCurrentHP -= damageToEnemy;
@@ -16,6 +17,7 @@ const damageToEnemy = playerPokemon[1].attack1.power;
         endGame(); //player wins
         enemyCurrentHP = 0; //sets enemy to 0hp
     }
+
 
 //ENEMY attack
 const damageToPlayer = enemyAttack.power;
@@ -28,5 +30,7 @@ const damageToPlayer = enemyAttack.power;
     renderGame();
 }
 
+
+//this runs when the game had ended
 function endGame() {
 }
