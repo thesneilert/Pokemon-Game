@@ -25,7 +25,6 @@ function renderFight(){
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/${playerPokemon[1].hp}</div>
       <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${playerPokemon[1].lvl}</text></div>
     </div>
-    <img src="assets/element/${playerPokemon[1].type}_player.png" class="element-picture"></img>
     <img src="assets/pokemon/${playerPokemon[1].spriteback}.png" class="foreground-pokemon"></img>
 
   <!-- ENEMY -->
@@ -34,13 +33,11 @@ function renderFight(){
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyCurrentHP}/${enemyPokemon[0].hp}</div> 
       <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${enemyPokemon[0].lvl}</text></div>    
     </div>
-    <img src="assets/element/${playerPokemon[0].type}_enemy.png" class="element-picture"></img>
     <img src="assets/pokemon/${enemyPokemon[0].spritefront}.png" class="foreground-pokemon"></img>
-
+    ${renderElementInfoBox()}
   `;
   return fightForegroundLayer
 }
-
 
 //render all the text for the fight
 function renderFightAttackMenu(){
@@ -57,4 +54,29 @@ function renderFightMenu(){
   <button id="menu-button-2">Run</button>
   `;
   return fightMenu
+}
+
+//renders the colors and text for the pokemon element boxes
+function renderElementInfoBox(){
+  const elementInfoBox = /*html*/`
+    <style>
+      #element-box-player{
+        background-color: ${playerPokemon[1].background};
+        border-color: ${playerPokemon[1].border};
+      }
+      #element-box-enemy{
+        background-color: ${playerPokemon[0].background};
+        border-color: ${playerPokemon[0].border};
+      }
+    </style>
+
+    <div id="element-box-player">
+      <text id="element-box-player-text">${playerPokemon[1].type}</text>
+    </div>
+
+    <div id="element-box-enemy">
+      <text id="element-box-player-enemy">${playerPokemon[0].type}</text>
+    </div>
+    `;
+  return elementInfoBox;
 }

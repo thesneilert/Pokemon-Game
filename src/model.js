@@ -1,3 +1,19 @@
+//element boxes colors
+var grassElement = {
+    background:'#65bb69',
+    border:'#43a047', 
+}
+
+var fireElement = {
+    background:'#fe9100',
+    border:'#fe5722', 
+}
+
+var waterElement = {
+    background:'#1d88e4',
+    border:'#0c47a1', 
+}
+
 //attacks
 var tackle = {
     name: 'Tackle',
@@ -34,6 +50,8 @@ var bulbasaur = {
     attack2: vinewhip,
     spritefront:'bulbasaur_front',
     spriteback:'bulbasaur_back',
+    background: grassElement.background,
+    border: grassElement.border,
 };
 
 var charmander = {
@@ -45,6 +63,8 @@ var charmander = {
     attack2: ember,
     spritefront:'charmander_front',
     spriteback:'charmander_back',
+    background: fireElement.background,
+    border: fireElement.border,
 };
 
 var squirtle = {
@@ -56,6 +76,8 @@ var squirtle = {
     attack2: bubble,
     spritefront:'squirtle_front',
     spriteback:'squirtle_back',
+    background: waterElement.background,
+    border: waterElement.border,
 };
 
 var playerPokemon = [bulbasaur, charmander, squirtle];
