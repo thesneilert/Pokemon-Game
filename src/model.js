@@ -1,3 +1,7 @@
+//set player and enemy current pokemon
+var playerCurrentPokemon = [0];
+var enemyCurrentPokemon = [0];
+
 //element boxes colors
 var grassElement = {
     background:'#65bb69',
