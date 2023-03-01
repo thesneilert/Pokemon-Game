@@ -1,6 +1,7 @@
 //set player and enemy current pokemon
-var playerCurrentPokemon = [0];
-var enemyCurrentPokemon = [0];
+//[0] for bulbasaur, [1] for charmander, [2] for squirtle
+var playerCurrentPokemon = [2];
+var enemyCurrentPokemon = [1];
 
 //element boxes colors
 var grassElement = {
