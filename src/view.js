@@ -24,7 +24,7 @@ function renderFight(){
     <div id="player-stats">
       <div class="stats-name-box">${playerPokemon[playerCurrentPokemon].name}</div>
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerCurrentHP}/${playerPokemon[playerCurrentPokemon].hp}</div>
-      <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${playerPokemon[playerCurrentPokemon].lvl}</text></div>
+      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${playerPokemon[playerCurrentPokemon].lvl}</text></div>
     </div>
     <img src="assets/pokemon/${playerPokemon[playerCurrentPokemon].spriteback}.png" class="foreground-pokemon"></img>
 
@@ -32,7 +32,7 @@ function renderFight(){
     <div id="enemy-stats">
       <div class="stats-name-box">${enemyPokemon[enemyCurrentPokemon].name}</div>
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyCurrentHP}/${enemyPokemon[enemyCurrentPokemon].hp}</div> 
-      <div class="stats-lvl-box">LV.<text class="stats-text-lvl">${enemyPokemon[enemyCurrentPokemon].lvl}</text></div>    
+      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${enemyPokemon[enemyCurrentPokemon].lvl}</text></div>    
     </div>
     <img src="assets/pokemon/${enemyPokemon[enemyCurrentPokemon].spritefront}.png" class="foreground-pokemon"></img>
     ${renderElementInfoBox()}

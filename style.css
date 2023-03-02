@@ -1,6 +1,11 @@
-/*------------- IMPORTS -------------*/
-@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-@import url("//db.onlinewebfonts.com/c/1c1b3fdb31c3460a94aa5f52255b0388?family=Pokemon+Fire+Red");
+/*------------- IMPORT FONT -------------*/
+@font-face {font-family: "Pokemon Fire Red";
+  src: url("http://db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot"); /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("http://db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff") format("woff"), /* chrome firefox */
+  url("http://db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("http://db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.svg#Pokemon Fire Red") format("svg"); /* iOS 4.1- */
+}
 
 /*------------- HTML MAIN -------------*/
 body{
@@ -207,28 +212,40 @@ button:hover{
   position: absolute;
   top: 5px;
   left: 10px;
+  font-size: 24px;
 }
 
 .stats-hp-box{
   position: absolute;
-  top:28px;
+  top:30px;
   right: 10px;
+  font-size: 20px;
 }
 
 .stats-text-hp{
   position: absolute;
-  top:0px;
-  right: 55px;
+  top:3px;
+  right: 52px;
+  font-size: 16px;
 }
 
 .stats-lvl-box{
   position: absolute;
-  top:28px;
+  top:30px;
   left: 10px;
+  font-size: 20px;
 }
 
 .stats-text-lvl{
   position: absolute;
-  top:0px;
-  right: -24px;
+  top:3px;
+  left: 0px;
+  font-size: 16px;
+}
+
+.stats-text-lvl-number{
+  position: absolute;
+  top:3px;
+  right: -26px;
+  font-size: 16px;
 }
