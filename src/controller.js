@@ -1,16 +1,32 @@
-//toogle the fight menu on/off
-function toogleFightMenu(){
-  console.log(leftMenuVisible)
-  if (leftMenuVisible === 0) {
-      leftMenuVisible = 1;
+//toogle the left menu
+function toggleMenuLeft(menuId){
+  if (leftMenuVisible === menuId) {
+      leftMenuVisible = 0;
   } 
   else { 
-    leftMenuVisible = 0;
+    leftMenuVisible = menuId;
   }
   renderGame();
 }
 
 
+function changePokemon(menuId){
+  if (playerCurrentPokemon === menuId){
+  }
+  else {
+    playerCurrentPokemon = menuId;
+  }
+  renderGame();
+}
+
+
+//bag menu function
+function chooseBagItem(menuId){
+  
+}
+
+
+//fight menu attack function
 function playerAttackBtn1(){
 //Makes the enemy do random attack
   const enemyAttackNum = Math.floor(Math.random()*2)+1;
@@ -35,16 +51,16 @@ const damageToEnemy = playerPokemon[1].attack1.power;
 
 //ENEMY attack
 const damageToPlayer = enemyAttack.power;
-      playerCurrentHP -= damageToPlayer;
+        playerPokemon[playerCurrentPokemon].currentHP -= damageToPlayer;
 //check if PLAYER has 0 or less hp
-    if (playerCurrentHP <= 0) {
+    if (playerPokemon[playerCurrentPokemon].currentHP <= 0) {
         endGame(); //enemy wins
-        playerCurrentHP = 0;
+        playerPokemon[playerCurrentPokemon].currenthp = 0;
     }
     renderGame();
 }
 
 
 //this runs when the game had ended
-function endGame() {
+function endGame(){
 }

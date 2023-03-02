@@ -152,89 +152,6 @@ button:hover{
   text-transform:uppercase;
 }
 
-/*------------- MENU BUTTONS TEXT -------------*/
-#menu-button-1 {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 60px;
-  height: 35px;
-  font-size: 19px;
-  text-transform:uppercase;
-}
-
-#menu-button-2 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 60px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
-#menu-button-3 {
-  position: absolute;
-  top: 55px;
-  left: 10px;
-  width: 60px;
-  height: 35px;
-  font-size: 17px;
-  text-transform:uppercase;
-}
-
-#menu-button-4 {
-  position: absolute;
-  top: 55px;
-  right: 10px;
-  width: 60px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
-
-/*------------- FIGHT BUTTONS TEXT -------------*/
-#fight-text-button-1 {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 150px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
-#fight-text-button-2 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 150px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
-#fight-text-button-3 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 150px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
-#fight-text-button-4 {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 150px;
-  height: 35px;
-  font-size: 22px;
-  text-transform:uppercase;
-}
-
 /*------------- STATS -------------*/
 #player-stats{
   background-color: #202020;
@@ -302,8 +219,192 @@ button:hover{
 
 /*------------- MAIN MENU TEXT -------------*/
 #render-main-menu-text{
-font-size: 30px;
-margin-top:10px;
-margin-left: 10px;
-overflow: hidden;
+  font-size: 30px;
+  margin-top:10px;
+  margin-left: 10px;
+  overflow: hidden;
+  }
+
+/*------------- MENU BUTTONS -------------*/
+#menu-button-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 19px;
+  text-transform:uppercase;
+}
+
+#menu-button-2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#menu-button-3 {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 17px;
+  text-transform:uppercase;
+}
+
+#menu-button-4 {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+/*------------- FIGHT BUTTONS -------------*/
+#fight-text-button-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#fight-text-button-2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#fight-text-button-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#fight-text-button-4 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+
+/*------------- POKEMON MENU -------------*/
+#pokemon-1{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#pokemon-1:hover{
+  background-image: url('assets/pokemon/bulbasaur.png');
+  background-position: center;
+  text-indent: -9999px;
+  background-color: #58834f;
+}
+
+#pokemon-2{
+  position: absolute;
+  top: 10px;
+  left: 115px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#pokemon-2:hover{
+  background-image: url('assets/pokemon/charmander.png');
+  background-position: center;
+  text-indent: -9999px;
+  background-color: #886332;
+}
+
+#pokemon-3{
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#pokemon-3:hover{
+  background-image: url('assets/pokemon/squirtle.png');
+  background-position: center;
+  text-indent: -9999px;
+  background-color: #4f8183;
+}
+
+/*------------- BAG MENU -------------*/
+#bag-1{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#bag-1:hover{
+  background-image: url('assets/items/potion.png');
+  background-position: center;
+  text-indent: -9999px;
+}
+
+#bag-2{
+  position: absolute;
+  top: 10px;
+  left: 115px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#bag-2:hover{
+  background-image: url('assets/items/potion_hyper.png');
+  background-position: center;
+  text-indent: -9999px;
+}
+
+#bag-3{
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  width: 95px;
+  height: 80px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#bag-3:hover{
+  background-image: url('assets/items/pokeball_normal.png');
+  background-position: center;
+  text-indent: -9999px;
 }
