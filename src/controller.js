@@ -1,10 +1,24 @@
+//toogle the fight menu on/off
+function toogleFightMenu(){
+  console.log(leftMenuVisible)
+  if (leftMenuVisible === 0) {
+      leftMenuVisible = 1;
+  } 
+  else { 
+    leftMenuVisible = 0;
+  }
+  renderGame();
+}
+
+
 function playerAttackBtn1(){
 //Makes the enemy do random attack
   const enemyAttackNum = Math.floor(Math.random()*2)+1;
   let enemyAttack;
     if (enemyAttackNum === 1) {
         enemyAttack = enemyPokemon[0].attack1;
-    } else {
+    } 
+    else {
         enemyAttack = enemyPokemon[0].attack2;
     }
 

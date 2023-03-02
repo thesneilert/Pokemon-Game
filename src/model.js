@@ -1,7 +1,7 @@
 //set player and enemy current pokemon
 //[0] for bulbasaur, [1] for charmander, [2] for squirtle
-var playerCurrentPokemon = [2];
-var enemyCurrentPokemon = [1];
+var playerCurrentPokemon = [1];
+var enemyCurrentPokemon = [0];
 
 //pokemon element box objects
 var grassElement = {
@@ -51,7 +51,7 @@ var bubble = {
 var bulbasaur = {
     name: 'Bulbasaur',
     type: 'grass',
-    lvl: 5,
+    lvl: 1,
     hp: 100,
     attack1: tackle,
     attack2: vinewhip,
@@ -64,7 +64,7 @@ var bulbasaur = {
 var charmander = {
     name: 'Charmander',
     type: 'fire',
-    lvl: 5,
+    lvl: 1,
     hp: 100,
     attack1: scratch,
     attack2: ember,
@@ -77,7 +77,7 @@ var charmander = {
 var squirtle = {
     name: 'Squirtle',
     type: 'water',
-    lvl: 5,
+    lvl: 1,
     hp: 100,
     attack1: tackle,
     attack2: bubble,
@@ -90,8 +90,11 @@ var squirtle = {
 
 //pokemon arrays
 var playerPokemon = [bulbasaur, charmander, squirtle];
-
 var enemyPokemon = [bulbasaur, charmander, squirtle];
 
-var playerCurrentHP = playerPokemon[1].hp;
-var enemyCurrentHP = playerPokemon[0].hp;
+var playerCurrentHP = playerPokemon[playerCurrentPokemon].hp;
+var enemyCurrentHP = playerPokemon[enemyCurrentPokemon].hp;
+
+
+//left menu/text box
+var leftMenuVisible = 0;

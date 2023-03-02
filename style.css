@@ -28,6 +28,9 @@ button{
   color: #cccccc;
   background-color: rgb(53, 53, 53);
   transition: background-color 0.1s ease, color 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover{
@@ -56,6 +59,7 @@ button:hover{
   border-radius: 4px;
   box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
   position: relative;
+  overflow: hidden;
 }
 
 #app-text-box{
@@ -99,6 +103,7 @@ button:hover{
 .element-picture{
   position: absolute;
 }
+
 /*------------- PLAYER ELEMENT -------------*/
 #element-box-player{
   width: 37px;
@@ -106,8 +111,8 @@ button:hover{
   border-style: solid;
   border-width: 1px;
   position: absolute;
-  left: 180px;
-  top: 30px;
+  right: 10px;
+  top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,15 +128,15 @@ button:hover{
   text-transform:uppercase;
 }
 
-/*------------- Enemy ELEMENT -------------*/
+/*------------- ENEMY ELEMENT -------------*/
 #element-box-enemy{
   width: 37px;
   height: 12px;
   border-style: solid;
   border-width: 1px;
   position: absolute;
-  left: 420px;
-  top: 30px;
+  right: 10px;
+  top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,14 +152,15 @@ button:hover{
   text-transform:uppercase;
 }
 
-/*------------- FIGHT MENU -------------*/
+/*------------- MENU BUTTONS TEXT -------------*/
 #menu-button-1 {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 60px;
   height: 35px;
-  font-size: 22px;
+  font-size: 19px;
+  text-transform:uppercase;
 }
 
 #menu-button-2 {
@@ -164,25 +170,69 @@ button:hover{
   width: 60px;
   height: 35px;
   font-size: 22px;
+  text-transform:uppercase;
 }
 
-/*------------- FIGHT TEXT -------------*/
+#menu-button-3 {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 17px;
+  text-transform:uppercase;
+}
+
+#menu-button-4 {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  width: 60px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+
+/*------------- FIGHT BUTTONS TEXT -------------*/
 #fight-text-button-1 {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 80px;
+  width: 150px;
   height: 35px;
   font-size: 22px;
+  text-transform:uppercase;
 }
 
 #fight-text-button-2 {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 80px;
+  top: 10px;
+  right: 10px;
+  width: 150px;
   height: 35px;
   font-size: 22px;
+  text-transform:uppercase;
+}
+
+#fight-text-button-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
+}
+
+#fight-text-button-4 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  height: 35px;
+  font-size: 22px;
+  text-transform:uppercase;
 }
 
 /*------------- STATS -------------*/
@@ -246,6 +296,14 @@ button:hover{
 .stats-text-lvl-number{
   position: absolute;
   top:3px;
-  right: -26px;
+  left: 20px;
   font-size: 16px;
+}
+
+/*------------- MAIN MENU TEXT -------------*/
+#render-main-menu-text{
+font-size: 30px;
+margin-top:10px;
+margin-left: 10px;
+overflow: hidden;
 }
