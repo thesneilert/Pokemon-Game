@@ -96,8 +96,19 @@ button:hover{
   position: absolute;
 }
 
-.foreground-pokemon{
+#foreground-pokemon-enemy{
   position: absolute;
+}
+
+#foreground-pokemon-player{
+  position: absolute;
+  animation: pokemon-player-animation 0.5s infinite;
+}
+
+@keyframes pokemon-player-animation {
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 .element-picture{
@@ -388,7 +399,7 @@ button:hover{
 }
 
 #bag-2:hover{
-  background-image: url('assets/items/potion_hyper.png');
+  background-image: url('assets/items/pokeball_normal.png');
   background-position: center;
   text-indent: -9999px;
 }
@@ -404,7 +415,7 @@ button:hover{
 }
 
 #bag-3:hover{
-  background-image: url('assets/items/pokeball_normal.png');
+  background-image: url('assets/items/rarecandy.png');
   background-position: center;
   text-indent: -9999px;
 }

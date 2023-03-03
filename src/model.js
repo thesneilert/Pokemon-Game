@@ -59,8 +59,7 @@ var bulbasaur = {
     lvl: 5,
     hp: 100,
     currentHP: 100,
-    attack1: tackle,
-    attack2: vinewhip,
+    attack: [tackle, vinewhip],
     spritefront:'bulbasaur_front',
     spriteback:'bulbasaur_back',
     background: grassElement.background,
@@ -73,8 +72,7 @@ var charmander = {
     lvl: 5,
     hp: 100,
     currentHP: 100,
-    attack1: scratch,
-    attack2: ember,
+    attack: [scratch, ember],
     spritefront:'charmander_front',
     spriteback:'charmander_back',
     background: fireElement.background,
@@ -87,8 +85,7 @@ var squirtle = {
     lvl: 5,
     hp: 100,
     currentHP: 100,
-    attack1: tackle,
-    attack2: bubble,
+    attack: [tackle, bubble],
     spritefront:'squirtle_front',
     spriteback:'squirtle_back',
     background: waterElement.background,
@@ -98,14 +95,16 @@ var squirtle = {
 //item objects
 var potion = {
     name: 'potion',
-}
-
-var superPotion = {
-    name: 'super potion',
+    value: '20',
 }
 
 var pokeball = {
     name: 'pokeball',
+}
+
+var rareCandy = {
+    name: 'rare candy',
+    value: '1',
 }
 
 
@@ -118,7 +117,7 @@ var enemyCurrentHP = playerPokemon[enemyCurrentPokemon].hp;
 
 
 //item arrays
-var item = [potion, superPotion, pokeball]
+var item = [potion, pokeball, rareCandy]
 
 //left menu/text box
 var leftMenuVisible = 0;

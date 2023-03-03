@@ -39,7 +39,7 @@ function renderScreen(){
       <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${playerPokemon[playerCurrentPokemon].lvl}</text></div>
       <div id="element-box-player"><text id="element-box-player-text">${playerPokemon[playerCurrentPokemon].type}</text></div>
     </div>
-    <img src="assets/pokemon/${playerPokemon[playerCurrentPokemon].spriteback}.png" class="foreground-pokemon"></img>
+    <img src="assets/pokemon/${playerPokemon[playerCurrentPokemon].spriteback}.png" id="foreground-pokemon-player"></img>
 
   <!-- ENEMY -->
     <div id="enemy-stats">
@@ -48,7 +48,7 @@ function renderScreen(){
       <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${enemyPokemon[enemyCurrentPokemon].lvl}</text></div>
       <div id="element-box-enemy"><text id="element-box-player-enemy">${playerPokemon[enemyCurrentPokemon].type}</text></div>    
     </div>|
-    <img src="assets/pokemon/${enemyPokemon[enemyCurrentPokemon].spritefront}.png" class="foreground-pokemon"></img>
+    <img src="assets/pokemon/${enemyPokemon[enemyCurrentPokemon].spritefront}.png" id="foreground-pokemon-enemy"></img>
   `;
   return screenWindow
 }
@@ -99,10 +99,10 @@ function renderRightMenu(){
 //render fight menu buttons
 function renderMenuFight(){
   const leftMenuFight = /*html*/`
-  <button onclick="playerAttackBtn1()" id="fight-text-button-1">${playerPokemon[playerCurrentPokemon].attack1.name}</button>
-  <button onclick="playerAttackBtn2()" id="fight-text-button-2">${playerPokemon[playerCurrentPokemon].attack2.name}</button>
-  <button onclick="playerAttackBtn3()" id="fight-text-button-3">${playerPokemon[playerCurrentPokemon].attack1.name}</button>
-  <button onclick="playerAttackBtn4()" id="fight-text-button-4">${playerPokemon[playerCurrentPokemon].attack1.name}</button>
+  <button onclick="playerAttackBtn(0)" id="fight-text-button-1">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
+  <button onclick="playerAttackBtn(1)" id="fight-text-button-2">${playerPokemon[playerCurrentPokemon].attack[1].name}</button>
+  <button onclick="playerAttackBtn(2)" id="fight-text-button-3">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
+  <button onclick="playerAttackBtn(3)" id="fight-text-button-4">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
   `;
   return leftMenuFight
 }
@@ -120,9 +120,9 @@ function renderMenuPokemon(){
 //render bag menu buttons
 function renderMenuBag(){
   const leftMenuPokemon = /*html*/`
-  <button onclick="chooseBagItem(0)" id="bag-1">${item[0].name}</button>
-  <button onclick="chooseBagItem(1)" id="bag-2">${item[1].name}</button>
-  <button onclick="chooseBagItem(2)" id="bag-3">${item[2].name}</button>
+  <button onclick="useItemPotion()" id="bag-1">${item[0].name}</button>
+  <button onclick="chooseBagItemPokemon()" id="bag-2">${item[1].name}</button>
+  <button onclick="chooseBagItemRareCandy()" id="bag-3">${item[2].name}</button>
   `;
   return leftMenuPokemon
 }
