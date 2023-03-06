@@ -90,7 +90,7 @@ function renderRightMenu(){
   <button onclick="toggleMenuLeft(1)" id="menu-button-1">fight</button>
   <button onclick="toggleMenuLeft(2)" id="menu-button-2">bag</button>
   <button onclick="toggleMenuLeft(3)" id="menu-button-3">pokemon</button>
-  <button onclick="toggleMenuLeft(4)" id="menu-button-4">reset</button>
+  <button onclick="endGame()" id="menu-button-4">reset</button>
   `;
   return rightMenuButtons
 }
@@ -101,8 +101,8 @@ function renderMenuFight(){
   const leftMenuFight = /*html*/`
   <button onclick="playerAttackBtn(0)" id="fight-text-button-1">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
   <button onclick="playerAttackBtn(1)" id="fight-text-button-2">${playerPokemon[playerCurrentPokemon].attack[1].name}</button>
-  <button onclick="playerAttackBtn(2)" id="fight-text-button-3">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
-  <button onclick="playerAttackBtn(3)" id="fight-text-button-4">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
+  <!--<button onclick="playerAttackBtn(2)" id="fight-text-button-3">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>
+  <button onclick="playerAttackBtn(3)" id="fight-text-button-4">${playerPokemon[playerCurrentPokemon].attack[0].name}</button>-->
   `;
   return leftMenuFight
 }

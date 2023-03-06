@@ -10,37 +10,34 @@ function toggleMenuLeft(menuId){
 }
 
 
-function changePokemon(menuId){
-  if (playerCurrentPokemon === menuId){
+function changePokemon(pokemonId){
+  if (playerCurrentPokemon === pokemonId){
   }
   else {
-    playerCurrentPokemon = menuId;
+    playerCurrentPokemon = pokemonId;
   }
   renderGame();
 }
 
 
-//bag menu function
-function chooseBagItem(menuId){
-  
-}
+
 
 
 //fight menu attack function
-function playerAttackBtn1(){
+function playerAttackBtn(attackId){
 //Makes the enemy do random attack
   const enemyAttackNum = Math.floor(Math.random()*2)+1;
   let enemyAttack;
     if (enemyAttackNum === 1) {
-        enemyAttack = enemyPokemon[0].attack1;
+        enemyAttack = enemyPokemon[enemyCurrentPokemon].attack[0];
     } 
     else {
-        enemyAttack = enemyPokemon[0].attack2;
+        enemyAttack = enemyPokemon[enemyCurrentPokemon].attack[1];
     }
 
 
 //PLAYER attack
-const damageToEnemy = playerPokemon[1].attack1.power;
+const damageToEnemy = playerPokemon[playerCurrentPokemon].attack[attackId].power;
       enemyCurrentHP -= damageToEnemy;
 //check if ENEMY has 0 or less hp
     if (enemyCurrentHP <= 0) {
@@ -58,6 +55,10 @@ const damageToPlayer = enemyAttack.power;
         playerPokemon[playerCurrentPokemon].currenthp = 0;
     }
     renderGame();
+}
+
+function useItemPotion(){
+  
 }
 
 
