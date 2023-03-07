@@ -1,5 +1,5 @@
 /*------------- IMPORT FONT -------------*/
-@import url(//db.onlinewebfonts.com/c/1c1b3fdb31c3460a94aa5f52255b0388?family=Pokemon+Fire+Red);
+@font-face {font-family: "Pokemon Fire Red"; src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot"); src: url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.woff") format("woff"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1c1b3fdb31c3460a94aa5f52255b0388.svg#Pokemon Fire Red") format("svg"); }
 
 /*------------- HTML MAIN -------------*/
 body{
