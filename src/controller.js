@@ -70,6 +70,9 @@ function useItemPotion() {
 
 //this function adds 1 lvl when using rare candy
 function useItemRareCandy() {
+  if (playerPokemon[playerCurrentPokemon].currentLVL === 100) {
+    return;
+  }
   playerPokemon[playerCurrentPokemon].currentLVL += rareCandy.value;
   if (playerPokemon[playerCurrentPokemon].currentLVL > 100) {
     playerPokemon[playerCurrentPokemon].currentLVL = playerPokemon[playerCurrentPokemon].lvl;
