@@ -82,6 +82,9 @@ function endGame(){
 }
 
 //this function resets the game
-function resetGame(){
-  location.reload();
+function resetGame() {
+  var confirmation = confirm("Are you sure you want to reset the game?");
+  if (confirmation) {
+    location.reload();
+  }
 }
