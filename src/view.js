@@ -36,7 +36,7 @@ function renderScreen(){
     <div id="player-stats">
       <div class="stats-name-box">${playerPokemon[playerCurrentPokemon].name}</div>
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${playerPokemon[playerCurrentPokemon].currentHP}/${playerPokemon[playerCurrentPokemon].hp}</div>
-      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${playerPokemon[playerCurrentPokemon].lvl}</text></div>
+      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${playerPokemon[playerCurrentPokemon].currentLVL}</text></div>
       <div id="element-box-player"><text id="element-box-player-text">${playerPokemon[playerCurrentPokemon].type}</text></div>
     </div>
     <img src="assets/pokemon/${playerPokemon[playerCurrentPokemon].spriteback}.png" id="foreground-pokemon-player"></img>
@@ -121,8 +121,8 @@ function renderMenuPokemon(){
 function renderMenuBag(){
   const leftMenuPokemon = /*html*/`
   <button onclick="useItemPotion()" id="bag-1">${item[0].name}</button>
-  <button onclick="chooseBagItemPokemon()" id="bag-2">${item[1].name}</button>
-  <button onclick="chooseBagItemRareCandy()" id="bag-3">${item[2].name}</button>
+  <button onclick="useItemPokemon()" id="bag-2">${item[1].name}</button>
+  <button onclick="useItemRareCandy()" id="bag-3">${item[2].name}</button>
   `;
   return leftMenuPokemon
 }

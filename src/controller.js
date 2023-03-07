@@ -58,13 +58,20 @@ const damageToPlayer = enemyAttack.power;
 }
 
 function useItemPotion() {
-  playerPokemon[playerCurrentPokemon].currentHP += 20;
+  playerPokemon[playerCurrentPokemon].currentHP += potion.value;
   if (playerPokemon[playerCurrentPokemon].currentHP > playerPokemon[playerCurrentPokemon].hp) {
     playerPokemon[playerCurrentPokemon].currentHP = playerPokemon[playerCurrentPokemon].hp;
   }
   renderGame();
 }
 
+function useItemRareCandy() {
+  playerPokemon[playerCurrentPokemon].currentLVL += rareCandy.value;
+  if (playerPokemon[playerCurrentPokemon].currentLVL > 100) {
+    playerPokemon[playerCurrentPokemon].currentLVL = playerPokemon[playerCurrentPokemon].lvl;
+  }
+  renderGame();
+}
 
 //this runs when the game had ended
 function endGame(){

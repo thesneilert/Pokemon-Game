@@ -57,6 +57,7 @@ var bulbasaur = {
     name: 'Bulbasaur',
     type: 'grass',
     lvl: 5,
+    currentLVL: 5,
     hp: 100,
     currentHP: 100,
     attack: [tackle, vinewhip],
@@ -70,6 +71,7 @@ var charmander = {
     name: 'Charmander',
     type: 'fire',
     lvl: 5,
+    currentLVL: 5,
     hp: 100,
     currentHP: 100,
     attack: [scratch, ember],
@@ -83,6 +85,7 @@ var squirtle = {
     name: 'Squirtle',
     type: 'water',
     lvl: 5,
+    currentLVL: 5,
     hp: 100,
     currentHP: 100,
     attack: [tackle, bubble],
@@ -95,16 +98,17 @@ var squirtle = {
 //item objects
 var potion = {
     name: 'potion',
-    value: '20',
+    value: 20,
 }
 
 var pokeball = {
     name: 'pokeball',
+    value: 1,
 }
 
 var rareCandy = {
     name: 'rare candy',
-    value: '1',
+    value: 1,
 }
 
 
