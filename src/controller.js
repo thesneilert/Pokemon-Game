@@ -57,6 +57,8 @@ const damageToPlayer = enemyAttack.power;
     renderGame();
 }
 
+
+//this function adds 20hp when using potions
 function useItemPotion() {
   playerPokemon[playerCurrentPokemon].currentHP += potion.value;
   if (playerPokemon[playerCurrentPokemon].currentHP > playerPokemon[playerCurrentPokemon].hp) {
@@ -65,6 +67,8 @@ function useItemPotion() {
   renderGame();
 }
 
+
+//this function adds 1 lvl when using rare candy
 function useItemRareCandy() {
   playerPokemon[playerCurrentPokemon].currentLVL += rareCandy.value;
   if (playerPokemon[playerCurrentPokemon].currentLVL > 100) {
@@ -75,4 +79,9 @@ function useItemRareCandy() {
 
 //this runs when the game had ended
 function endGame(){
+}
+
+//this function resets the game
+function resetGame(){
+  location.reload();
 }
