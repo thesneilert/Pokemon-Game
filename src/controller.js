@@ -41,8 +41,8 @@ const damageToEnemy = playerPokemon[playerCurrentPokemon].attack[attackId].power
       enemyCurrentHP -= damageToEnemy;
 //check if ENEMY has 0 or less hp
     if (enemyCurrentHP <= 0) {
-        endGame(); //player wins
-        enemyCurrentHP = 0; //sets enemy to 0hp
+      enemyCurrentHP = 0; //sets enemy to 0hp
+        endGameWon(); //player wins
     }
 
 
@@ -51,8 +51,8 @@ const damageToPlayer = enemyAttack.power;
         playerPokemon[playerCurrentPokemon].currentHP -= damageToPlayer;
 //check if PLAYER has 0 or less hp
     if (playerPokemon[playerCurrentPokemon].currentHP <= 0) {
-        endGame(); //enemy wins
-        playerPokemon[playerCurrentPokemon].currentHP = 0;
+      playerPokemon[playerCurrentPokemon].currentHP = 0;
+        endGameLost(); //enemy wins
     }
     renderGame();
 }
@@ -77,9 +77,24 @@ function useItemRareCandy() {
   renderGame();
 }
 
-//this runs when the game had ended
-function endGame(){
+
+//this runs when the game had ended if you win
+function endGameWon() {
+  var confirmation = confirm("You won!");
+  if (confirmation) {
+    location.reload();
+  }
 }
+
+
+//this runs when the game had ended if you loose
+function endGameLost() {
+  var confirmation = confirm("You lost!");
+  if (confirmation) {
+    location.reload();
+  }
+}
+
 
 //this function resets the game
 function resetGame() {
