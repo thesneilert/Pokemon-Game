@@ -52,13 +52,17 @@ const damageToPlayer = enemyAttack.power;
 //check if PLAYER has 0 or less hp
     if (playerPokemon[playerCurrentPokemon].currentHP <= 0) {
         endGame(); //enemy wins
-        playerPokemon[playerCurrentPokemon].currenthp = 0;
+        playerPokemon[playerCurrentPokemon].currentHP = 0;
     }
     renderGame();
 }
 
-function useItemPotion(){
-  
+function useItemPotion() {
+  playerPokemon[playerCurrentPokemon].currentHP += 20;
+  if (playerPokemon[playerCurrentPokemon].currentHP > playerPokemon[playerCurrentPokemon].hp) {
+    playerPokemon[playerCurrentPokemon].currentHP = playerPokemon[playerCurrentPokemon].hp;
+  }
+  renderGame();
 }
 
 
