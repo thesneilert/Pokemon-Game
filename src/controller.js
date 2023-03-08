@@ -20,9 +20,6 @@ function changePokemon(pokemonId){
 }
 
 
-
-
-
 //fight menu attack function
 function playerAttackBtn(attackId){
 //Makes the enemy do random attack

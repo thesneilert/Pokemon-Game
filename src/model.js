@@ -56,8 +56,8 @@ var bubble = {
 var bulbasaur = {
     name: 'Bulbasaur',
     type: 'grass',
-    lvl: 5,
-    currentLVL: 5,
+    lvl: 100,
+    currentLVL: 1,
     hp: 100,
     currentHP: 100,
     attack: [tackle, vinewhip],
@@ -70,8 +70,8 @@ var bulbasaur = {
 var charmander = {
     name: 'Charmander',
     type: 'fire',
-    lvl: 5,
-    currentLVL: 5,
+    lvl: 100,
+    currentLVL: 1,
     hp: 100,
     currentHP: 100,
     attack: [scratch, ember],
@@ -84,8 +84,8 @@ var charmander = {
 var squirtle = {
     name: 'Squirtle',
     type: 'water',
-    lvl: 5,
-    currentLVL: 5,
+    lvl: 100,
+    currentLVL: 1,
     hp: 100,
     currentHP: 100,
     attack: [tackle, bubble],
@@ -116,12 +116,24 @@ var rareCandy = {
 var playerPokemon = [bulbasaur, charmander, squirtle];
 var enemyPokemon = [bulbasaur, charmander, squirtle];
 
+
+//pokemon current hp
 var playerCurrentHP = playerPokemon[playerCurrentPokemon].hp;
 var enemyCurrentHP = playerPokemon[enemyCurrentPokemon].hp;
 
 
+//pokemon current pokemon random
+var playerCurrentPokemon = Math.floor(Math.random() * playerPokemon.length);
+var enemyCurrentPokemon = Math.floor(Math.random() * enemyPokemon.length);
+
+//pokemon current lvl random
+playerPokemon[playerCurrentPokemon].currentLVL = Math.floor(Math.random() * playerPokemon[playerCurrentPokemon].lvl) + 1;
+enemyPokemon[enemyCurrentPokemon].currentLVL = Math.floor(Math.random() * enemyPokemon[enemyCurrentPokemon].lvl) + 1;
+
+
 //item arrays
 var item = [potion, pokeball, rareCandy]
+
 
 //left menu/text box
 var leftMenuVisible = 0;

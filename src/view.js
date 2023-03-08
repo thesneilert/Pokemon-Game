@@ -45,7 +45,7 @@ function renderScreen(){
     <div id="enemy-stats">
       <div class="stats-name-box">${enemyPokemon[enemyCurrentPokemon].name}</div>
       <div class="stats-hp-box"><text class="stats-text-hp">HP.</text>${enemyCurrentHP}/${enemyPokemon[enemyCurrentPokemon].hp}</div> 
-      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${enemyPokemon[enemyCurrentPokemon].lvl}</text></div>
+      <div class="stats-lvl-box"><text class="stats-text-lvl">LV.</text><text class="stats-text-lvl-number">${enemyPokemon[enemyCurrentPokemon].currentLVL}</text></div>
       <div id="element-box-enemy"><text id="element-box-player-enemy">${playerPokemon[enemyCurrentPokemon].type}</text></div>    
     </div>|
     <img src="assets/pokemon/${enemyPokemon[enemyCurrentPokemon].spritefront}.png" id="foreground-pokemon-enemy"></img>
